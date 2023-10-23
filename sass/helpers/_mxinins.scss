@@ -1,0 +1,29 @@
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin list-style{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+@mixin rad{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+@mixin active{
+    background: linear-gradient(40deg , rgba(214, 24, 62, 0.799), rgb(255, 97, 85));
+                        box-shadow: 0 0 10px rgb(255, 97, 85),
+                        0 0 10px rgba(214, 24, 62, 0.799);
+}
+@mixin media($screen){
+    @if $screen == 'mobile'{
+        @media (max-width:560px) {
+            @content;
+        }
+    }
+}

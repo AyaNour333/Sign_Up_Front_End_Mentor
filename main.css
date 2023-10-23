@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: " roboto", sans-serif;
+  background-color: rgb(25, 40, 74);
+}
+@media (max-width: 560px) {
+  body {
+    background-color: #fff;
+  }
+}
+
+.container .right, .container .left {
+  width: 50%;
+}
+
+.success .input-contain input, .container .left form input[type=button] {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 800px;
+  padding: 15px;
+  background-color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin: 40px auto;
+}
+@media (max-width: 560px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+.container .left {
+  padding: 20px;
+  color: rgb(25, 40, 74);
+}
+.container .left h1 {
+  color: rgb(25, 40, 74);
+  margin-bottom: 0;
+}
+.container .left p {
+  font-size: 17px;
+  margin-top: 15px;
+}
+@media (max-width: 560px) {
+  .container .left p {
+    font-size: 13px;
+  }
+}
+.container .left ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.container .left ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 560px) {
+  .container .left ul li img {
+    margin-right: 5px;
+  }
+}
+.container .left ul li span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 16px;
+}
+@media (max-width: 560px) {
+  .container .left ul li span {
+    font-size: 12px;
+    font-weight: normal;
+  }
+}
+.container .left form .label {
+  display: flex;
+  justify-content: space-between;
+}
+.container .left form .label span {
+  color: rgb(25, 40, 74);
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+}
+.container .left form .label span.invalid {
+  display: none;
+}
+.container .left form .label span.invalid.active {
+  display: block;
+  color: rgba(255, 0, 0, 0.6901960784);
+  font-size: 11px;
+}
+.container .left form input {
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  width: 100%;
+  border: none;
+}
+.container .left form input[type=text] {
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+.container .left form input[type=text].error {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1019607843);
+  color: red;
+}
+.container .left form input[type=button] {
+  background-color: rgb(25, 40, 74);
+  color: #fff;
+  padding: 15px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container .left form input[type=button]:hover {
+  background: linear-gradient(40deg, rgba(214, 24, 62, 0.799), rgb(255, 97, 85));
+  box-shadow: 0 0 10px rgb(255, 97, 85), 0 0 10px rgba(214, 24, 62, 0.799);
+}
+.container .left form input[type=button].active {
+  background: linear-gradient(40deg, rgba(214, 24, 62, 0.799), rgb(255, 97, 85));
+  box-shadow: 0 0 10px rgb(255, 97, 85), 0 0 10px rgba(214, 24, 62, 0.799);
+}
+@media (max-width: 560px) {
+  .container .left {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .container .right {
+    width: 100%;
+  }
+}
+.container .right img {
+  max-width: 100%;
+}
+.container .right img:not(:last-child) {
+  display: none;
+}
+@media (max-width: 560px) {
+  .container .right img {
+    display: none;
+  }
+  .container .right img:not(:last-child) {
+    display: block;
+  }
+}
+
+.success {
+  background-color: #fff;
+  padding: 20px;
+  width: 230px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: rgb(25, 40, 74);
+  z-index: 1000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+@media (max-width: 560px) {
+  .success img {
+    margin-top: 95px;
+  }
+}
+@media (max-width: 560px) {
+  .success {
+    top: 40%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+  }
+}
+.success h2 {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+@media (max-width: 560px) {
+  .success h2 {
+    font-size: 30px;
+    margin-top: 12px;
+  }
+}
+.success p {
+  font-size: 10px;
+  line-height: 1.2;
+}
+@media (max-width: 560px) {
+  .success p {
+    line-height: 1.5;
+  }
+}
+.success p span {
+  font-weight: bold;
+  font-size: 11px;
+}
+@media (max-width: 560px) {
+  .success p span {
+    font-size: 15px;
+  }
+}
+.success .input-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+@media (max-width: 560px) {
+  .success .input-contain {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+.success .input-contain input {
+  border: none;
+  background-color: rgb(25, 40, 74);
+  color: #fff;
+  padding: 11px;
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+}
+.success .input-contain input:hover {
+  background: linear-gradient(40deg, rgba(214, 24, 62, 0.799), rgb(255, 97, 85));
+  box-shadow: 0 0 10px rgb(255, 97, 85), 0 0 10px rgba(214, 24, 62, 0.799);
+}
+@media (max-width: 560px) {
+  .success .input-contain input {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */
